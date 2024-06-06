@@ -39,6 +39,5 @@ class AdjacencyMatrixGraphTest {
             throw new RuntimeException(e);
         }
 
-
     }
 }

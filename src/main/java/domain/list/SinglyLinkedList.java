@@ -1,5 +1,7 @@
 package domain.list;
 
+import static java.lang.StringTemplate.STR;
+
 public class SinglyLinkedList implements List{
     private Node first; //apuntador al inicio de la lista
 
@@ -200,17 +202,15 @@ public class SinglyLinkedList implements List{
     }
 
     @Override
-    public Node getNode(int index) throws ListException {
+    public Node getNode(Object element) throws ListException {
         if(isEmpty()){
             throw new ListException("Singly Linked List is Empty");
         }
         Node aux = first;
-        int i = 1; // pos del primer nodo
         while(aux!=null){
-            if(util.Utility.compare(i, index)==0) {  //ya encontro el indice
+            if(util.Utility.compare(aux.data, element)==0) {  //ya encontro el indice
                 return aux;
             }
-            i++; //incremento la var local
             aux = aux.next; //muevo aux al sgte nodo
         }
         return null; //si llega aqui es xq no encontro el index
