@@ -230,6 +230,39 @@ public class AdjacencyListGraph implements Graph {
         }//for i
         return -1;
     }
+    public void connectEvenOddEdges() throws GraphException, ListException {
+        if (isEmpty()) {
+            throw new GraphException("Adjacency List Graph is empty");
+        }
+
+        for (int i = 0; i < counter; i++) {
+            Vertex vertex = vertexList[i];
+            for (int j = i + 1; j < counter; j++) {
+                Vertex vertex1 = vertexList[j];
+                // Check if both vertices are even
+                if (isEven(vertex.data) && isEven(vertex1.data)) {
+                    if (!containsEdge(vertex.data, vertex1.data)) {
+                        addEdge(vertex.data, vertex1.data);
+                    }
+                }
+                // Check if both vertices are odd
+                if (!isEven(vertex.data) && !isEven(vertex1.data)) {
+                    if (!containsEdge(vertex.data, vertex1.data)) {
+                        addEdge(vertex.data, vertex1.data);
+                    }
+                }
+            }
+        }
+    }
+
+    private boolean isEven(Object data) {
+        if (data instanceof Integer) {
+            return ((Integer) data) % 2 == 0;
+        }
+        return false;
+    }
+
+
 
     @Override
     public String toString() {

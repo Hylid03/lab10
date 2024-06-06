@@ -10,7 +10,18 @@ class AdjacencyListGraphTest {
     @Test
     void test() throws GraphException, ListException {
         AdjacencyListGraph graph = new AdjacencyListGraph(50);
-        try {
+        int num ;
+        for (int i = 0; i < 20; i++) {
+            num =util.Utility.getRandom(51)-1;
+            graph.addVertex(num);
+            System.out.println("num "+num+" was added");
+        }
+        System.out.println(graph);
+        for (int i = 0; i < 5; i++) {
+
+        }
+
+        /*try {
             graph.addVertex('A');
             graph.addVertex('B');
             graph.addVertex('C');
@@ -30,11 +41,11 @@ class AdjacencyListGraphTest {
 
             //lanza una excepción
             //graph.addEdgeWeight('G', 'K', 7);
-
             System.out.println(graph.toString());
 
     }catch (GraphException | ListException e){
             throw new RuntimeException(e);
-        }
+        }*/
+
     }
 }

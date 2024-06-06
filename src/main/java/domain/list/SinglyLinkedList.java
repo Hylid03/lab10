@@ -1,6 +1,6 @@
 package domain.list;
 
-import static java.lang.StringTemplate.STR;
+
 
 public class SinglyLinkedList implements List{
     private Node first; //apuntador al inicio de la lista
