@@ -202,6 +202,10 @@ public class SinglyLinkedList implements List{
     }
 
     @Override
+    public Node getNode(int index) throws ListException {
+        return null;
+    }
+
     public Node getNode(Object element) throws ListException {
         if(isEmpty()){
             throw new ListException("Singly Linked List is Empty");
@@ -221,7 +225,7 @@ public class SinglyLinkedList implements List{
         String result = "Singly Linked List Content\n\n";
         Node aux = first;
         while(aux!=null){
-            result+= STR."\{aux.data}, ";
+            result+= "{aux.data}, ";
             aux = aux.next;
         }
         return result;
