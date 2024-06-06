@@ -20,7 +20,7 @@ public class Utility {
     public static String show(int[] a, int size) {
         String result="";
         for (int i = 0; i < size; i++) {
-            result+= STR."\{a[i]} ";
+            result+= "a[i]} ";
         }
         return result;
     }
@@ -48,8 +48,8 @@ public class Utility {
                 return c1.compareTo(c2)<0 ? -1 : c1.compareTo(c2)>0 ? 1 : 0;
             case "EdgeWeight":
                 Edgeweight ew1 =(Edgeweight) a; Edgeweight ew2 =(Edgeweight) b;
-                return ew1.getEdge().toString.compareTo(ew2.getEdge.toString))? 0 1: 0;
-                        ew1.getEdge().toString.compareTo(ew2.getEdge.toString))<0?-1:1;
+                return ew1.getEdge().equals(ew2.getEdge().toString())?0:
+                        ew1.getEdge().toString().compareTo(ew2.getEdge().toString())< 0 ?-1:1;
         }
         return 2; //Unknown
     }

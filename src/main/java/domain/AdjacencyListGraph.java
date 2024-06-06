@@ -124,8 +124,10 @@ public class AdjacencyListGraph implements Graph {
             throw new GraphException("Cannot add edge between vertexes ["
                     +a+"] and ["+b+"]");
         }
-        adjacencyList[indexOf(a)][indexOf(b)] = weight;
-        adjacencyList[indexOf(b)][indexOf(a)] = weight; //grafo no dirigido
+        vertexList[indexOf(a)].edgesList.add(new Edgeweight(b,weight));
+        vertexList[indexOf(b)].edgesList.add(new Edgeweight(a,weight));
+
+
     }
 
     @Override
