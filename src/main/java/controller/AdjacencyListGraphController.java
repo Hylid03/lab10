@@ -24,7 +24,7 @@ public class AdjacencyListGraphController {
 
     @FXML
     public void initialize() {
-        AdjacencyListGraph graph = new AdjacencyListGraph(50);
+        graph = new AdjacencyListGraph(50);
     }
 
     @FXML
