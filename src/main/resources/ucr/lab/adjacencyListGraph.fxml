@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="619.0" prefWidth="905.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdjacencyListGraphController">
+   <Pane layoutX="-4.0" prefHeight="619.0" prefWidth="916.0">
+      <children>
+          <Button text="DFS Tour" />
+          <Button text="Contains Vertex" />
+          <Button text="Contains Edge" />
+      
+          <Button text="Randomize" />
+          <Button text="To String" />
+          <Button text="BFS Tour" />
+      </children>
+   </Pane>
+
+</AnchorPane>
