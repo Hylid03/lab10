@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.AdjacencyListOperationsController"
-            prefHeight="400.0" prefWidth="600.0">
-
-    <Button text="Randomize" layoutX="20.0" layoutY="20.0" />
-    <Button text="Add Vertex" layoutX="20.0" layoutY="60.0" />
-    <Button text="Add Edges and Weights" layoutX="20.0" layoutY="100.0" />
-    <Button text="Remove Vertex" layoutX="20.0" layoutY="140.0" />
-    <Button text="Remove Edges and Weights" layoutX="20.0" layoutY="180.0" />
-    <Button text="Clear" layoutX="20.0" layoutY="220.0" />
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdjacencyListOperationsController">
+    <Pane prefHeight="595.0" prefWidth="890.0" style="-fx-background-color: #6fbcaa;">
+        <children>
+            <Button layoutX="14.0" layoutY="85.0" prefHeight="41.0" prefWidth="264.0" text="Randomize" onAction="#randomizeGraph" />
+            <Button layoutX="313.0" layoutY="85.0" prefHeight="41.0" prefWidth="264.0" text="Add Vertex" onAction="#addVertex" />
+            <Button layoutX="601.0" layoutY="85.0" prefHeight="41.0" prefWidth="264.0" text="Add Edges and Weights" onAction="#addEdgesAndWeights" />
+            <Button layoutX="14.0" layoutY="141.0" prefHeight="41.0" prefWidth="264.0" text="Remove Vertex" onAction="#removeVertex" />
+            <Button layoutX="313.0" layoutY="141.0" prefHeight="41.0" prefWidth="264.0" text="Remove Edges and Weights" onAction="#removeEdgesAndWeights" />
+            <Button layoutX="601.0" layoutY="141.0" prefHeight="41.0" prefWidth="264.0" text="Clear" onAction="#clearGraph" />
+            <Pane prefHeight="75.0" prefWidth="890.0" style="-fx-background-color: #556270;">
+                <children>
+                    <Label layoutX="169.0" layoutY="14.0" prefHeight="53.0" prefWidth="499.0" text="Adjacency List Graph List" textAlignment="CENTER" textFill="WHITE">
+                        <font>
+                            <Font size="36.0" />
+                        </font>
+                    </Label>
+                </children>
+            </Pane>
+            <TextArea fx:id="txA_ALGO" layoutX="14.0" layoutY="198.0" prefHeight="372.0" prefWidth="340.0" />
+        </children></Pane>
 </AnchorPane>

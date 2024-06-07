@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.AdjacencyMatrixGraphController"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="619.0" prefWidth="905.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdjacencyMatrixGraphController">
+    <Pane layoutX="-2.0" prefHeight="619.0" prefWidth="916.0" style="-fx-background-color: #a8c4a2;">
+        <children>
+            <Button layoutX="-3.0" layoutY="214.0" prefHeight="50.0" prefWidth="125.0" text="DFS Tour" onAction="#dfs" />
+            <Button layoutX="134.0" layoutY="101.0" prefHeight="50.0" prefWidth="133.0" text="Contains Vertex" onAction="#containsVertex" />
+            <Button layoutX="2.0" layoutY="158.0" prefHeight="50.0" prefWidth="125.0" text="Contains Edge" onAction="#containsEdge" />
 
-    <Button text="Randomize" layoutX="20.0" layoutY="20.0" />
-    <Button text="Contains Vertex" layoutX="20.0" layoutY="60.0" />
-    <Button text="Contains Edge" layoutX="20.0" layoutY="100.0" />
-    <Button text="To String" layoutX="20.0" layoutY="140.0" />
-    <Button text="DFS Tour" layoutX="20.0" layoutY="180.0" />
-    <Button text="BFS Tour" layoutX="20.0" layoutY="220.0" />
+            <Button layoutX="-3.0" layoutY="101.0" prefHeight="50.0" prefWidth="125.0" text="Randomize" onAction="#randomizeGraph" />
+            <Button layoutX="134.0" layoutY="158.0" prefHeight="50.0" prefWidth="133.0" text="To String" onAction="#toStringGraph" />
+            <Button layoutX="134.0" layoutY="214.0" prefHeight="50.0" prefWidth="133.0" text="BFS Tour" onAction="#bfs" />
+            <Pane prefHeight="93.0" prefWidth="916.0" style="-fx-background-color: #c93e4f;">
+                <children>
+                    <Label layoutX="258.0" layoutY="16.0" prefHeight="61.0" prefWidth="429.0" text="Adjacency Matrix Graph" textAlignment="CENTER">
+                        <font>
+                            <Font size="40.0" />
+                        </font>
+                    </Label>
+                </children>
+            </Pane>
+            <TextArea fx:id="txA_AMG" editable="false" layoutX="14.0" layoutY="276.0" prefHeight="320.0" prefWidth="310.0" />
+            <Label fx:id="txf_AMG" layoutX="283.0" layoutY="109.0" textFill="#da0e0e" visible="false" />
+        </children>
+    </Pane>
 
 </AnchorPane>
