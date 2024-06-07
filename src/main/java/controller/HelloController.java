@@ -1,7 +1,6 @@
 package controller;
 
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -18,9 +17,9 @@ public class HelloController {
     @FXML
     private AnchorPane ap;
     @FXML
-    private Text messageText;
+    private Text txtMessage;
 
-    private void loadPage(String page){
+    private void loadPage(String page) {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(page));
         try {
             this.bp.setCenter(fxmlLoader.load());
@@ -30,28 +29,35 @@ public class HelloController {
     }
 
     @FXML
-    void home(ActionEvent event) {
-        this.messageText.setText("Laboratory 9");
-        this.bp.setCenter(ap);
-    }
-
-    @FXML
-    void exit(ActionEvent event) {
+    void Exit(ActionEvent event) {
         System.exit(0);
     }
 
     @FXML
-    public void bstAVLOperations(ActionEvent actionEvent) {
-        loadPage("bstAVLOperations.fxml");
+    void Home(ActionEvent event) {
+        this.txtMessage.setText("Laboratory No. 10");
+        this.bp.setCenter(ap);
     }
 
     @FXML
-    public void bstAVLTourOnAction(ActionEvent actionEvent) {
-        loadPage("bstAVLTour.fxml");
+    void adjacencyListGraphOnAction(ActionEvent event) {
+        loadPage("adjacencyListGraph.fxml");
+
     }
 
     @FXML
-    public void graphicBSTAVLOnAction(ActionEvent actionEvent) {
-        loadPage("graphicBSTAVL.fxml");
+    void adjacencyMatrixGraphOnAction(ActionEvent event) {
+        loadPage("adjacencyMatrixGraph.fxml");
     }
+
+    @FXML
+    void listOperationsOnAction(ActionEvent event) {
+        loadPage("adjacencyListOperations.fxml");
+    }
+
+    @FXML
+    void matrixOperationsOnAction(ActionEvent event) {
+        loadPage("adjacencyMatrixOperations.fxml");
+    }
+
 }
